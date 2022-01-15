@@ -29,7 +29,6 @@ const Wrapper  = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 `
 
 const Box = styled(motion.div)` // Framer-motion과 styled컴포넌트를 사용하는 방법

@@ -4,7 +4,7 @@ import {motion, AnimatePresence} from "framer-motion"
 
 //AnimatePresence : 컴포넌트가 사라질 때 애니메이션 동작을 지시
 
-const Box = styled(motion.div)` // Framer-motion과 styled컴포넌트를 사용하는 방법
+export const Box = styled(motion.div)` // Framer-motion과 styled컴포넌트를 사용하는 방법
   width: 200px;
   height: 200px;
   background-color: rgba(255,255,255,0.2);
@@ -36,11 +36,13 @@ const BoxVariants = {
 }
 
 const BoxSlide = { // 이 Box는 slide를 만들기 위한 Box
-    entry : (back:boolean) => ({
-        x: back ? -500 : 500,
-        opacity:0,
-        scale:0
-    }),
+    entry : (back:boolean) => {
+        return {
+            x: back ? -500 : 500,
+            opacity:0,
+            scale:0
+        }
+    },
     center : {
         x:0,
         opacity:1,
